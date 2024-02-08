@@ -42,4 +42,50 @@ public class Collaboration {
         }
     }
 
+    public static int getMinimum(int[] arr) {
+
+
+
+    }
+
+    public static int getMaximum(int[] arr) {
+
+
+
+    }
+
+    public static int[] averageDifferences(int[] arr) {
+
+
+
+    }
+
+    public static int sumOfOdd(int[] arr) {
+        
+
+
+
+    }
+
+    public static int sumOfEven(int[] arr) {
+        
+
+
+
+    }
+
+    public static int average(int[] arr) {
+        
+
+
+
+    }
+
+    public static int[] arrayInitialize(int size) {
+
+
+
+        
+    }
+
 }
