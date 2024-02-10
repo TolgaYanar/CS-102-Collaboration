@@ -8,10 +8,12 @@ public class Collaboration {
         System.out.println( "Please type the length of array:");
         int length = scanner.nextInt();
         int[] arr = arrayInitialize( length);
+        String choice = "";
         do {
             System.out.println("Current Array: " + Arrays.toString(arr));
             menu();
-            choice(scanner.nextLine(), arr);
+            choice = scanner.next();
+            choice(choice, arr);
         } while (cont);
         scanner.close();
     }
@@ -20,7 +22,7 @@ public class Collaboration {
 
     public static void menu() {
 
-        String options = "
+        String options = """
                 1- Find Minimum
                 2- Find Maximum
                 3- Find Average
@@ -28,7 +30,7 @@ public class Collaboration {
                 5- Sum of Odd-numbered Indexes
                 6- Sum of Even-numbered Indexes
                 7- QUIT
-                Please select an option :";
+                Please select an option :""";
         System.out.println(options);
     }
 
@@ -73,7 +75,7 @@ public class Collaboration {
     public static int sumOfOdd(int[] arr) {
         int sumOfOddIndexes = 0;
 
-        for (int i : arr) {
+        for (int i = 0; i< arr.length ; i++) {
             if ( i % 2 == 1) 
             {
                 sumOfOddIndexes += arr [i];
@@ -88,7 +90,7 @@ public class Collaboration {
 
         int sumOfEvenIndexes = 0;
 
-        for (int i : arr) {
+        for ( int i = 0; i< arr.length ; i++) {
             if ( i % 2 == 0) 
             {
                 sumOfEvenIndexes += arr [i];
