@@ -20,7 +20,7 @@ public class Collaboration {
 
     public static void menu() {
 
-        String options = """
+        String options = "
                 1- Find Minimum
                 2- Find Maximum
                 3- Find Average
@@ -28,7 +28,7 @@ public class Collaboration {
                 5- Sum of Odd-numbered Indexes
                 6- Sum of Even-numbered Indexes
                 7- QUIT
-                Please select an option :""";
+                Please select an option :";
         System.out.println(options);
     }
 
@@ -101,7 +101,14 @@ public class Collaboration {
     }
 
     public static int average(int[] arr) {
-        
+
+        int average = 0;
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++){
+            sum += arr[i];
+        }
+        average = sum / arr.length;
+        return average;
 
 
 
@@ -109,7 +116,14 @@ public class Collaboration {
 
     public static int[] arrayInitialize(int size) {
 
+        int[] newArray = new int[size];
+        int lowerLimit = 0;
+        int upperLimit = 100;
+        for ( int i = 0; i < newArray.length; i++){
 
+            newArray[i] = (int) (Math.random() * (upperLimit - lowerLimit)) + lowerLimit;
+        }
+        return newArray;
 
         
     }
