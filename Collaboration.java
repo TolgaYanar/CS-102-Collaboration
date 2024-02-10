@@ -76,16 +76,26 @@ public class Collaboration {
 
     public static int average(int[] arr) {
         
-
-
+        int average = 0;
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++){
+            sum += arr[i];
+        }
+        average = sum / arr.length;
+        return average;
 
     }
 
-    public static int[] arrayInitialize(int size) {
+    public static int[] arrayInitialize(int length) {
 
+        int[] newArray = new int[length];
+        int lowerLimit = 0;
+        int upperLimit = 100;
+        for ( int i = 0; i < newArray.length; i++){
 
-
-        
+            newArray[i] = (int) (Math.random() * (upperLimit - lowerLimit)) + lowerLimit;
+        }
+        return newArray;
     }
 
 }
