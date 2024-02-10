@@ -5,7 +5,9 @@ public class Collaboration {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int[] arr = arrayInitialize(10);
+        System.out.println( "Please type the length of array:");
+        int length = scanner.nextInt();
+        int[] arr = arrayInitialize( length);
         do {
             System.out.println("Current Array: " + Arrays.toString(arr));
             menu();
@@ -25,7 +27,8 @@ public class Collaboration {
                 4- Average Differences
                 5- Sum of Odd-numbered Indexes
                 6- Sum of Even-numbered Indexes
-                7- QUIT""";
+                7- QUIT
+                Please select an option :""";
         System.out.println(options);
     }
 
@@ -56,21 +59,44 @@ public class Collaboration {
 
     public static int[] averageDifferences(int[] arr) {
 
+        int [] averageDiff = new int [ arr.length];
+        int average = average(arr);
 
+        for (int i = 0; i < arr.length; i++) 
+        {
+            averageDiff [i] = arr [i] - average;
+        }
+        return averageDiff;
 
     }
 
     public static int sumOfOdd(int[] arr) {
+        int sumOfOddIndexes = 0;
+
+        for (int i : arr) {
+            if ( i % 2 == 1) 
+            {
+                sumOfOddIndexes += arr [i];
+            }
+            
+        }
+        return sumOfOddIndexes;
         
-
-
-
     }
 
     public static int sumOfEven(int[] arr) {
+
+        int sumOfEvenIndexes = 0;
+
+        for (int i : arr) {
+            if ( i % 2 == 0) 
+            {
+                sumOfEvenIndexes += arr [i];
+            }
+            
+        }
+        return sumOfEvenIndexes;
         
-
-
 
     }
 
