@@ -49,14 +49,30 @@ public class Collaboration {
 
     public static int getMinimum(int[] arr) {
 
+        int minimumNumber = arr[0];
 
+        for(int i=1; i < arr.length; i++){
 
+            if(arr[i] < minimumNumber){
+                minimumNumber = arr[i];
+            }
+        }
+
+        return minimumNumber;
     }
 
     public static int getMaximum(int[] arr) {
 
+        int maximumNumber = arr[0];
+        
+        for(int i=1; i < arr.length; i++){
 
-
+            if(arr[i] > maximumNumber){
+                maximumNumber = arr[i];
+            }
+        }
+        
+        return maximumNumber;
     }
 
     public static int[] averageDifferences(int[] arr) {
